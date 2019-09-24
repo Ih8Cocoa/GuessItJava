@@ -20,23 +20,6 @@
             app:popExitAnim="@anim/slide_out_left" />
     </fragment>
     <fragment
-        android:id="@+id/scoreFragment"
-        android:name="com.meow.guessitjava.screens.score.ScoreFragment"
-        android:label="fragment_score"
-        tools:layout="@layout/fragment_score" >
-        <action
-            android:id="@+id/action_restart"
-            app:destination="@id/gameFragment"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_left"
-            app:popEnterAnim="@anim/slide_in_right"
-            app:popExitAnim="@anim/slide_out_left"
-            app:popUpTo="@+id/titleFragment" />
-        <argument
-            android:name="score"
-            app:argType="integer" />
-    </fragment>
-    <fragment
         android:id="@+id/gameFragment"
         android:name="com.meow.guessitjava.screens.game.GameFragment"
         android:label="GameFragment" >
@@ -49,6 +32,22 @@
             app:popEnterAnim="@anim/slide_in_right"
             app:popExitAnim="@anim/slide_out_left"
             app:popUpTo="@+id/titleFragment" />
-
+    </fragment>
+    <fragment
+        android:id="@+id/scoreFragment"
+        android:name="com.meow.guessitjava.screens.score.ScoreFragment"
+        android:label="fragment_score"
+        tools:layout="@layout/fragment_score" >
+        <action
+            android:id="@+id/action_restart"
+            app:destination="@+id/gameFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"
+            app:popUpTo="@+id/titleFragment" />
+        <argument
+            android:name="score"
+            app:argType="integer" />
     </fragment>
 </navigation>

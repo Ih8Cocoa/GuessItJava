@@ -11,6 +11,7 @@ import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 
 import com.meow.guessitjava.R;
@@ -31,8 +32,8 @@ public class TitleFragment extends Fragment {
         );
 
         // set the on-click listener for the button that navigates to the playing screen
-        NavDirections toGameScreen = TitleFragmentDirections.actionTitleFragmentToGameFragment();
-        View.OnClickListener listener = Navigation.createNavigateOnClickListener(toGameScreen);
+        final NavDirections toGameScreen = TitleFragmentDirections.actionTitleFragmentToGameFragment();
+        final OnClickListener listener = Navigation.createNavigateOnClickListener(toGameScreen);
         binding.playButton.setOnClickListener(listener);
 
         return binding.getRoot();
